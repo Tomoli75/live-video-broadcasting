@@ -1,7 +1,3 @@
-![alt text](https://img.shields.io/docker/automated/Tomoli75/live-video-broadcasting.svg)
-![alt text](https://img.shields.io/docker/build/Tomoli75/live-video-broadcasting.svg)
-![alt text](https://img.shields.io/docker/pulls/Tomoli75/live-video-broadcasting.svg)
-
 # About
 
 This container is grabbing web page (picture + audio) using web browser and transcode it in rtmp video stream. 
