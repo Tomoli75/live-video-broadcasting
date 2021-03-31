@@ -23,7 +23,7 @@ pacmd set-default-sink v1
 pacmd set-default-source v1.monitor
 
 #--force-device-scale-factor=2
-xvfb-run --server-num 99 --server-args="-ac -screen 0 2560x1440x60" \
+xvfb-run --server-num 99 --server-args="-ac -screen 0 2560x1440x24" \
     google-chrome-stable --no-sandbox --disable-gpu \
     --hide-scrollbars --disable-notifications \
     --disable-infobars --no-first-run \
@@ -38,7 +38,7 @@ echo "Waiting some time to confirm chrome is running"
 sleep 10
 
 ffmpeg -thread_queue_size 512 -draw_mouse 0 \
-    -f x11grab -r 60 -s 2560x1440 -i :99 \
+    -f x11grab -r 24 -s 2560x1440 -i :99 \
     -f alsa -ac 2 -i default \
     -vcodec libx264 -acodec aac -ab 256k \
     -preset ultrafast -b:v $V_BITRATE -b:a $A_BITRATE -threads 0 \
