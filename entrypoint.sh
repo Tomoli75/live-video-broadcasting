@@ -11,7 +11,7 @@ if [[ -z "$RTMP_URL" ]]; then
 fi
 
 LANGUAGE="${LANGUAGE:-en}"
-V_BITRATE="${V_BITRATE:-3000k}"
+V_BITRATE="${V_BITRATE:-6000k}"
 A_BITRATE="${A_BITRATE:-128k}"
 
 sudo /etc/init.d/dbus start > /dev/null 2>&1
@@ -27,7 +27,7 @@ xvfb-run --server-num 99 --server-args="-ac -screen 0 1280x720x24" \
     google-chrome-stable --no-sandbox --disable-gpu \
     --hide-scrollbars --disable-notifications \
     --disable-infobars --no-first-run \
-    --autoplay-policy=no-user-gesture-required \
+    --autoplay-policy=no-user-gesture-required –test-type \
     --lang="$LANGUAGE" \
     --start-fullscreen --window-size=1280,720 \
     $GRAB_URL > /dev/null 2>&1 &
