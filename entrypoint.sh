@@ -28,7 +28,7 @@ xvfb-run --server-num 99 --server-args="-ac -screen 0 1280x720x24" \
     --hide-scrollbars --disable-notifications \
     --disable-infobars --no-first-run \
     --autoplay-policy=no-user-gesture-required \
-    –test-type \
+    -test-type \
     --lang="$LANGUAGE" \
     --start-fullscreen --window-size=1280,720 \
     $GRAB_URL > /dev/null 2>&1 &
