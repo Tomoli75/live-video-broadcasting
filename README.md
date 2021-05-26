@@ -1,6 +1,7 @@
 # About
 
 This container is grabbing web page (picture + audio) using web browser and transcode it in rtmp video stream. 
+This project is a fork, slightly modified to fit my own purposes. I would not recommend using it unless you have to!
 
 ### Youtube live video:
 
